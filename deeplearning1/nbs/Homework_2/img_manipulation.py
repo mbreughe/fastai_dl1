@@ -12,7 +12,7 @@ import numpy as np
 # @verbose: visualize the cropping process
 def crop_and_save_img(ifname, ofname, bb_dots, verbose=False):
     tl, tr, br, bl = bb_dots
-    img = imageio.imread(fname)
+    img = imageio.imread(ifname)
     
     theta = calc_rot_angle(tl, tr, br, bl)
     r_img, r_details = rotate_img(img, theta)
